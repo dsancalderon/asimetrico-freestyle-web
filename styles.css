@@ -504,7 +504,7 @@ section {
   gap: 80px;
   align-items: start;
 }
-#info .left {}
+/*#info .left {}*/
 .rules-list {
   list-style: none;
   display: flex;

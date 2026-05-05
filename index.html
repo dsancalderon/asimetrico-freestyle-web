@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Liga Universitaria de Freestyle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav id="main-nav">
+    <a href="#" class="nav-logo">
+      <img src="img/logo_asimetrico.png" alt="Logo" class="final-logo" />
+      <div class="nav-logo-text">
+        <span>Liga Universitaria</span>
+        <span>Freestyle · Colombia</span>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#artistas">Artistas</a></li>
+      <li><a href="#eventos">Eventos</a></li>
+      <li><a href="#info">Info</a></li>
+      <li><a href="#final">Final</a></li>
+    </ul>
+
+    <a href="#eventos" class="nav-cta">Inscríbete</a>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-video-wrap">
+      <video id="bg-video" autoplay muted loop playsinline poster="">
+        <source src="tu-trailer.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-grain"></div>
+    <div class="scan-line"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Temporada 2026 · Colombia</p>
+      <h1 class="hero-title">
+        <span class="line-silver">Liga Universitaria</span>
+        <span class="line-white">de Freestyle</span>
+      </h1>
+      <p class="hero-sub">Muchos hablan, pocos riman, solo los mejores improvisan. Representa a tu universidad.</p>
+      <div class="hero-actions">
+        <a href="#eventos" class="btn-primary">Ver Eventos</a>
+        <a href="#artistas" class="btn-ghost">Competidores</a>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-arrow"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <div class="strip-nav">
+    <a href="#hero" class="active">Inicio</a>
+    <a href="#artistas">Artistas</a>
+    <a href="#eventos">Eventos</a>
+    <a href="#info">Info</a>
+    <a href="#final">Final Internacional</a>
+  </div>
+
+  <section id="artistas">
+    <p class="section-label">Temporada 2026</p>
+    <h2 class="section-title">Competidores</h2>
+    <div class="grid">
+      <div class="artist-card artist-placeholder" data-initials="MK">
+        <div class="artist-overlay">
+          <p class="artist-name">MKultra</p>
+          <p class="artist-uni">U. Nacional</p>
+        </div>
+      </div>
+      <div class="artist-card artist-placeholder" data-initials="VR">
+        <div class="artist-overlay">
+          <p class="artist-name">Vertigo</p>
+          <p class="artist-uni">U. de los Andes</p>
+        </div>
+      </div>
+      <div class="artist-card artist-placeholder" data-initials="SK">
+        <div class="artist-overlay">
+          <p class="artist-name">Skema</p>
+          <p class="artist-uni">U. Javeriana</p>
+        </div>
+      </div>
+      <div class="artist-card artist-placeholder" data-initials="NX">
+        <div class="artist-overlay">
+          <p class="artist-name">Nexo</p>
+          <p class="artist-uni">U. del Rosario</p>
+        </div>
+      </div>
+      <div class="artist-card artist-placeholder" data-initials="FX">
+        <div class="artist-overlay">
+          <p class="artist-name">Fénix</p>
+          <p class="artist-uni">U. Externado</p>
+        </div>
+      </div>
+      <div class="artist-card artist-placeholder" data-initials="SL">
+        <div class="artist-overlay">
+          <p class="artist-name">Sello</p>
+          <p class="artist-uni">U. Distrital</p>
+        </div>
+      </div>
+      <div class="artist-card artist-placeholder" data-initials="RM">
+        <div class="artist-overlay">
+          <p class="artist-name">Ritmo</p>
+          <p class="artist-uni">U. Libre</p>
+        </div>
+      </div>
+      <div class="artist-card artist-placeholder" data-initials="CR">
+        <div class="artist-overlay">
+          <p class="artist-name">Crudo</p>
+          <p class="artist-uni">U. Antonio Nariño</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="eventos" style="padding: 100px 60px; background:#0c0c0c;">
+    <div style="max-width:1400px; margin:0 auto;">
+      <p class="section-label">Calendario</p>
+      <h2 class="section-title">Eventos</h2>
+
+      <div class="events-list">
+        <div class="event-row">
+          <div class="event-date">15<small>MAR</small></div>
+          <div class="event-divider"></div>
+          <div class="event-info">
+            <p class="event-name">Clasificatoria Bogotá — Zona Norte</p>
+            <p class="event-place">Auditorio U. Nacional · Bogotá</p>
+          </div>
+          <span class="event-badge open">Inscripción abierta</span>
+          <span class="event-arrow">→</span>
+        </div>
+        <div class="event-row">
+          <div class="event-date">29<small>MAR</small></div>
+          <div class="event-divider"></div>
+          <div class="event-info">
+            <p class="event-name">Clasificatoria Medellín</p>
+            <p class="event-place">Parque de los Deseos · Medellín</p>
+          </div>
+          <span class="event-badge open">Inscripción abierta</span>
+          <span class="event-arrow">→</span>
+        </div>
+        <div class="event-row">
+          <div class="event-date">12<small>ABR</small></div>
+          <div class="event-divider"></div>
+          <div class="event-info">
+            <p class="event-name">Clasificatoria Cali</p>
+            <p class="event-place">Teatro Municipal · Cali</p>
+          </div>
+          <span class="event-badge">Próximamente</span>
+          <span class="event-arrow">→</span>
+        </div>
+        <div class="event-row">
+          <div class="event-date">26<small>ABR</small></div>
+          <div class="event-divider"></div>
+          <div class="event-info">
+            <p class="event-name">Semifinal Nacional</p>
+            <p class="event-place">Centro de Convenciones · Bogotá</p>
+          </div>
+          <span class="event-badge">Próximamente</span>
+          <span class="event-arrow">→</span>
+        </div>
+        <div class="event-row">
+          <div class="event-date">17<small>MAY</small></div>
+          <div class="event-divider"></div>
+          <div class="event-info">
+            <p class="event-name">Gran Final Nacional</p>
+            <p class="event-place">Por confirmar · Colombia</p>
+          </div>
+          <span class="event-badge" style="border-color:rgba(212,175,55,.7); color:var(--accent);">Final</span>
+          <span class="event-arrow">→</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="info" style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; max-width:1400px; margin:0 auto; padding:100px 60px;">
+    <div>
+      <p class="section-label">Reglamento</p>
+      <h2 class="section-title">¿Cómo funciona?</h2>
+      <ul class="rules-list">
+        <li><span class="rule-num">01</span><span class="rule-text">Debes ser estudiante universitario activo con carné vigente.</span></li>
+        <li><span class="rule-num">02</span><span class="rule-text">Batallas 1v1 de 60 segundos por turno, formato doble ronda.</span></li>
+        <li><span class="rule-num">03</span><span class="rule-text">Jurado de 3 jueces especializados en freestyle. Voto de calidad en caso de empate.</span></li>
+        <li><span class="rule-num">04</span><span class="rule-text">Criterios de evaluación: ingenio, flow, contenido, reacción y replica.</span></li>
+        <li><span class="rule-num">05</span><span class="rule-text">Los 2 mejores de cada clasificatoria avanzan a semifinal nacional.</span></li>
+        <li><span class="rule-num">06</span><span class="rule-text">El campeón representa a Colombia en la Final Internacional.</span></li>
+      </ul>
+    </div>
+    <div class="info-stats">
+      <div class="stat-box">
+        <div class="stat-num">8</div>
+        <div class="stat-label">Ciudades</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">64</div>
+        <div class="stat-label">Competidores</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">12</div>
+        <div class="stat-label">Universidades</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Campeón</div>
+      </div>
+    </div>
+  </section>
+
+  <div id="final" style="text-align:center; padding:120px 40px; position:relative; overflow:hidden; background:linear-gradient(135deg,#0a0a0a 0%,#141414 50%,#0a0a0a 100%);">
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Bebas Neue',sans-serif;font-size:clamp(8rem,20vw,22rem);color:rgba(255,255,255,.025);white-space:nowrap;pointer-events:none;">FINAL</div>
+    <img src="img/logo_asimetrico.png" alt="Logo">
+    <h2 class="final-title">Final Internacional</h2>
+    <p class="final-sub">El mejor freestyler universitario de Colombia competirá a nivel internacional.<br>¿Tienes lo que se necesita?</p>
+    <a href="#eventos" class="btn-primary">Inscríbete ahora</a>
+  </div>
+
+  <footer>
+    <div class="foot-logo">
+      <img src="img/logo_asimetrico.png" alt="Logo">
+      <span style="font-family:'Barlow Condensed',sans-serif;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);">Liga Universitaria de Freestyle</span>
+    </div>
+    <div class="foot-links">
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">YouTube</a>
+      <a href="#">Contacto</a>
+    </div>
+    <p class="foot-copy">© 2026 Liga Universitaria de Freestyle · Colombia</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html> 

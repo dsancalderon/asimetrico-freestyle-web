@@ -508,6 +508,16 @@ nav.scrolled {
   background: rgba(100,160,255,.07);
 }
 
+.uni-btn--info {
+  color: #3b82f6 !important; /* Azul */
+  border: none !important;
+}
+
+.uni-btn--gold {
+  color: #d4af37 !important; /* Dorado */
+  border: none !important;
+}
+
 /* ── Logo de universidad en la barra ── */
 .uni-logo-wrap {
   width: 46px;

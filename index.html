@@ -945,63 +945,36 @@
   
 
   <!-- ══════════════════════════════════════════
-       EVENTOS
+       EVENTOS — Dinámico desde Google Sheets
   ══════════════════════════════════════════ -->
   <div id="eventos" class="section-eventos section-page">
     <div class="eventos-inner">
       <p class="section-label">Calendario</p>
       <h2 class="section-title">Eventos</h2>
 
-      <div class="events-list">
-        <div class="event-row">
-          <div class="event-date">15<small>MAR</small></div>
-          <div class="event-divider"></div>
-          <div class="event-info">
-            <p class="event-name">Clasificatoria Bogotá — Zona Norte</p>
-            <p class="event-place">Auditorio U. Nacional · Bogotá</p>
-          </div>
-          <span class="event-badge open">Inscripción abierta</span>
-          <span class="event-arrow">→</span>
-        </div>
-        <div class="event-row">
-          <div class="event-date">29<small>MAR</small></div>
-          <div class="event-divider"></div>
-          <div class="event-info">
-            <p class="event-name">Clasificatoria Medellín</p>
-            <p class="event-place">Parque de los Deseos · Medellín</p>
-          </div>
-          <span class="event-badge open">Inscripción abierta</span>
-          <span class="event-arrow">→</span>
-        </div>
-        <div class="event-row">
-          <div class="event-date">12<small>ABR</small></div>
-          <div class="event-divider"></div>
-          <div class="event-info">
-            <p class="event-name">Clasificatoria Cali</p>
-            <p class="event-place">Teatro Municipal · Cali</p>
-          </div>
-          <span class="event-badge">Próximamente</span>
-          <span class="event-arrow">→</span>
-        </div>
-        <div class="event-row">
-          <div class="event-date">26<small>ABR</small></div>
-          <div class="event-divider"></div>
-          <div class="event-info">
-            <p class="event-name">Semifinal Nacional</p>
-            <p class="event-place">Centro de Convenciones · Bogotá</p>
-          </div>
-          <span class="event-badge">Próximamente</span>
-          <span class="event-arrow">→</span>
-        </div>
-        <div class="event-row">
-          <div class="event-date">17<small>MAY</small></div>
-          <div class="event-divider"></div>
-          <div class="event-info">
-            <p class="event-name">Gran Final Nacional</p>
-            <p class="event-place">Por confirmar · Colombia</p>
-          </div>
-          <span class="event-badge event-badge--final">Final</span>
-          <span class="event-arrow">→</span>
+      <div id="events-loading" class="events-loading">
+        <div class="events-loading-dot"></div>
+        <div class="events-loading-dot"></div>
+        <div class="events-loading-dot"></div>
+        <span>Cargando eventos...</span>
+      </div>
+
+      <div id="events-error" class="events-error" hidden>
+        <span class="events-error-icon">⚠</span>
+        <p>No se pudieron cargar los eventos. Verifica tu conexión.</p>
+        <button onclick="loadEvents()" class="btn-ghost" style="margin-top:16px;font-size:.8rem;padding:10px 24px;">Reintentar</button>
+      </div>
+
+      <div id="events-list" class="events-list" hidden></div>
+
+      <div id="inscription-modal" class="modal-overlay" hidden>
+        <div class="modal-box">
+          <button class="modal-close" onclick="closeModal()">✕</button>
+          <p class="modal-label">Formulario de inscripción</p>
+          <h3 id="modal-event-name" class="modal-title"></h3>
+          <div id="modal-countdown" class="modal-countdown"></div>
+          <p id="modal-event-info" class="modal-info"></p>
+          <a id="modal-form-link" href="#" target="_blank" rel="noopener" class="btn-primary modal-btn">Ir al formulario →</a>
         </div>
       </div>
     </div>
@@ -1068,5 +1041,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="events.js"></script>
 </body>
 </html>

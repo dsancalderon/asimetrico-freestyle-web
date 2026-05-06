@@ -339,6 +339,7 @@ nav.scrolled {
   align-items: flex-start;
   margin-bottom: 40px;
   position: relative;
+  flex-wrap: nowrap;
 }
 .timeline-item::before {
   content: '';
@@ -360,8 +361,10 @@ nav.scrolled {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 2rem;
   color: var(--silver-dark);
-  min-width: 72px;
+  min-width: 88px;
   line-height: 1;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .timeline-item--current .timeline-year { color: var(--accent); }
 .timeline-content h3 {
@@ -901,4 +904,228 @@ footer .foot-links a:hover { color: rgba(255,255,255,.7); }
   .strip-nav { padding: 0 16px; }
   .logros-grid { grid-template-columns: 1fr; }
   .inicio-timeline { padding-left: 32px; }
+}
+/* ══════════════════════════════════════════
+   EVENTOS DINÁMICOS — Google Sheets
+══════════════════════════════════════════ */
+
+/* ── uni-bar-meta: nombre plaza junto a ciudad ── */
+.uni-bar-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+.uni-bar-sep {
+  color: rgba(255,255,255,.2);
+  font-size: .75rem;
+}
+.uni-bar-plaza {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: .75rem;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* ── Loading dots ── */
+.events-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 48px 0;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: .85rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.35);
+}
+.events-loading-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--silver-dark);
+  animation: dotPulse 1.2s ease-in-out infinite;
+}
+.events-loading-dot:nth-child(2) { animation-delay: .2s; }
+.events-loading-dot:nth-child(3) { animation-delay: .4s; }
+@keyframes dotPulse {
+  0%, 80%, 100% { opacity: .3; transform: scale(.8); }
+  40%           { opacity: 1;  transform: scale(1.1); }
+}
+
+/* ── Error ── */
+.events-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 64px 0;
+  text-align: center;
+}
+.events-error-icon { font-size: 2rem; opacity: .4; }
+.events-error p {
+  font-size: .9rem;
+  color: rgba(255,255,255,.4);
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: .15em;
+}
+
+/* ── Event row extras ── */
+.event-row--done { opacity: .45; }
+.event-row--done .event-name { text-decoration: line-through; }
+.event-row--live { border-left: 3px solid #ff4444; padding-left: 20px; }
+
+.event-nota {
+  display: block;
+  font-size: .75rem;
+  color: rgba(255,255,255,.3);
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* ── Botón de formulario ── */
+.event-form-btn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: .78rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: linear-gradient(135deg, #6fe08a, #3db860);
+  border: none;
+  padding: 10px 22px;
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  cursor: pointer;
+  transition: filter .2s, transform .2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.event-form-btn:hover { filter: brightness(1.15); transform: translateY(-2px); }
+
+/* ── Badge estados ── */
+.event-badge.open     { border-color: rgba(111,224,138,.5); color: #6fe08a; }
+.event-badge.upcoming { border-color: rgba(192,192,192,.25); color: var(--silver-dark); }
+.event-badge.live     { border-color: rgba(255,68,68,.6); color: #ff6666; animation: livePulse 1.5s ease-in-out infinite; }
+.event-badge.done     { border-color: rgba(255,255,255,.1); color: rgba(255,255,255,.2); }
+.event-badge.final    { border-color: rgba(212,175,55,.7); color: var(--accent); }
+
+@keyframes livePulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: .6; }
+}
+
+.event-live-dot {
+  display: inline-block;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #ff4444;
+  margin-right: 6px;
+  animation: livePulse 1s ease-in-out infinite;
+}
+
+/* ── Modal de inscripción ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0,0,0,.75);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.modal-overlay[hidden] { display: none; }
+
+.modal-box {
+  background: #141414;
+  border: 1px solid rgba(255,255,255,.1);
+  max-width: 480px;
+  width: 100%;
+  padding: 48px 40px 40px;
+  position: relative;
+  clip-path: polygon(16px 0%, 100% 0%, calc(100% - 16px) 100%, 0% 100%);
+  animation: modalIn .25s ease;
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(16px) scale(.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px; right: 20px;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,.4);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color .2s;
+}
+.modal-close:hover { color: #fff; }
+
+.modal-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: .7rem;
+  letter-spacing: .45em;
+  text-transform: uppercase;
+  color: var(--silver-dark);
+  margin-bottom: 10px;
+}
+
+.modal-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: .08em;
+  color: #fff;
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+
+.modal-info {
+  font-size: .85rem;
+  color: rgba(255,255,255,.45);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.modal-countdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #0e0e0e;
+  padding: 12px 18px;
+  margin-bottom: 28px;
+  border-left: 3px solid var(--accent);
+}
+.modal-countdown:empty { display: none; }
+.modal-cd-icon { font-size: 1rem; }
+.modal-cd-text {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: .95rem;
+  letter-spacing: .12em;
+  color: var(--accent);
+}
+.modal-cd-text.expired { color: rgba(255,255,255,.3); }
+
+.modal-btn {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+.btn-disabled {
+  background: #333 !important;
+  color: rgba(255,255,255,.3) !important;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* ── Responsive eventos ── */
+@media (max-width: 768px) {
+  .event-row { flex-wrap: wrap; gap: 16px; }
+  .event-form-btn { width: 100%; text-align: center; clip-path: none; }
+  .modal-box { clip-path: none; padding: 36px 24px 32px; }
 }

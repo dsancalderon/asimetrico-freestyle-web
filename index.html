@@ -6,30 +6,22 @@
   <title>Liga Universitaria de Freestyle</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
-  
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+  <!-- ── NAVBAR: solo logo centrado ── -->
   <nav id="main-nav">
-    <a href="#" class="nav-logo">
-      <img src="img/logo_asimetrico.png" alt="Logo" class="final-logo" />
+    <a href="#" class="nav-logo nav-logo--center">
+      <img src="img/logo_asimetrico_sin_fondo.png" alt="Logo" class="final-logo" />
       <div class="nav-logo-text">
         <span>Liga Universitaria</span>
         <span>Freestyle · Colombia</span>
       </div>
     </a>
-
-    <ul class="nav-links">
-      <li><a href="#artistas">Artistas</a></li>
-      <li><a href="#eventos">Eventos</a></li>
-      <li><a href="#info">Info</a></li>
-      <li><a href="#final">Final</a></li>
-    </ul>
-
-    <a href="#eventos" class="nav-cta">Inscríbete</a>
   </nav>
 
+  <!-- ── HERO ── -->
   <section id="hero">
     <div class="hero-video-wrap">
       <video id="bg-video" autoplay muted loop playsinline poster="">
@@ -42,14 +34,14 @@
 
     <div class="hero-content">
       <p class="hero-eyebrow">Temporada 2026 · Colombia</p>
-      <h1 class="hero-title">
+      <h1 class="hero-title hero-title--small">
         <span class="line-silver">Liga Universitaria</span>
         <span class="line-white">de Freestyle</span>
       </h1>
       <p class="hero-sub">Muchos hablan, pocos riman, solo los mejores improvisan. Representa a tu universidad.</p>
       <div class="hero-actions">
         <a href="#eventos" class="btn-primary">Ver Eventos</a>
-        <a href="#artistas" class="btn-ghost">Competidores</a>
+        <a href="#universidades" class="btn-ghost">Universidades</a>
       </div>
     </div>
 
@@ -59,71 +51,418 @@
     </div>
   </section>
 
+  <!-- ── STRIP NAV ── -->
   <div class="strip-nav">
-    <a href="#hero" class="active">Inicio</a>
-    <a href="#artistas">Artistas</a>
+    <a href="#inicio" class="active">Inicio</a>
+    <a href="#universidades">Universidades</a>
     <a href="#eventos">Eventos</a>
     <a href="#info">Info</a>
-    <a href="#final">Final Internacional</a>
   </div>
 
-  <section id="artistas">
-    <p class="section-label">Temporada 2026</p>
-    <h2 class="section-title">Competidores</h2>
-    <div class="grid">
-      <div class="artist-card artist-placeholder" data-initials="MK">
-        <div class="artist-overlay">
-          <p class="artist-name">MKultra</p>
-          <p class="artist-uni">U. Nacional</p>
+  <!-- ══════════════════════════════════════════
+       INICIO — Historia e identidad de Asimétrico
+  ══════════════════════════════════════════ -->
+  <section id="inicio" class="section-inicio section-page">
+    <div class="inicio-header">
+      <p class="section-label">Nuestra historia</p>
+      <h2 class="section-title">¿Qué es Asimétrico?</h2>
+      <p class="inicio-intro">
+        Asimétrico nació en 2022 con una sola misión: darle a los freestylers universitarios un escenario propio, profesional y digno de su talento. Hoy somos la competencia de rap improvisado más importante del ámbito universitario en Colombia.
+      </p>
+    </div>
+
+    <div class="inicio-timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">2022</div>
+        <div class="timeline-content">
+          <h3>Fundación</h3>
+          <p>Primera edición con 4 ciudades participantes. Más de 120 freestylers se inscribieron en la primera convocatoria, superando todas las expectativas.</p>
         </div>
       </div>
-      <div class="artist-card artist-placeholder" data-initials="VR">
-        <div class="artist-overlay">
-          <p class="artist-name">Vertigo</p>
-          <p class="artist-uni">U. de los Andes</p>
+      <div class="timeline-item">
+        <div class="timeline-year">2023</div>
+        <div class="timeline-content">
+          <h3>Expansión Nacional</h3>
+          <p>La liga creció a 6 ciudades y consolidó alianzas con 8 universidades. Se transmitió en vivo por primera vez, alcanzando más de 50.000 espectadores.</p>
         </div>
       </div>
-      <div class="artist-card artist-placeholder" data-initials="SK">
-        <div class="artist-overlay">
-          <p class="artist-name">Skema</p>
-          <p class="artist-uni">U. Javeriana</p>
+      <div class="timeline-item">
+        <div class="timeline-year">2024</div>
+        <div class="timeline-content">
+          <h3>Reconocimiento Internacional</h3>
+          <p>El campeón colombiano compitió en la Final Internacional representando a Latinoamérica. La liga fue reconocida por la FMS como liga universitaria oficial.</p>
         </div>
       </div>
-      <div class="artist-card artist-placeholder" data-initials="NX">
-        <div class="artist-overlay">
-          <p class="artist-name">Nexo</p>
-          <p class="artist-uni">U. del Rosario</p>
+      <div class="timeline-item">
+        <div class="timeline-year">2025</div>
+        <div class="timeline-content">
+          <h3>Récord de participación</h3>
+          <p>64 competidores, 12 universidades, 8 ciudades. La edición más grande de la historia con transmisión en 4 plataformas simultáneas.</p>
         </div>
       </div>
-      <div class="artist-card artist-placeholder" data-initials="FX">
-        <div class="artist-overlay">
-          <p class="artist-name">Fénix</p>
-          <p class="artist-uni">U. Externado</p>
+      <div class="timeline-item timeline-item--current">
+        <div class="timeline-year">2026</div>
+        <div class="timeline-content">
+          <h3>Temporada actual</h3>
+          <p>Nueva temporada, nuevas reglas, más ciudades. La búsqueda del mejor freestyler universitario de Colombia continúa. ¿Serás tú?</p>
         </div>
       </div>
-      <div class="artist-card artist-placeholder" data-initials="SL">
-        <div class="artist-overlay">
-          <p class="artist-name">Sello</p>
-          <p class="artist-uni">U. Distrital</p>
+    </div>
+
+    <div class="inicio-logros">
+      <p class="section-label" style="margin-bottom:32px;">Logros e identidad</p>
+      <div class="logros-grid">
+        <div class="logro-card">
+          <div class="logro-icon">🏆</div>
+          <h4>Liga Oficial</h4>
+          <p>Reconocida por la FMS como la liga universitaria oficial de rap improvisado en Colombia.</p>
         </div>
-      </div>
-      <div class="artist-card artist-placeholder" data-initials="RM">
-        <div class="artist-overlay">
-          <p class="artist-name">Ritmo</p>
-          <p class="artist-uni">U. Libre</p>
+        <div class="logro-card">
+          <div class="logro-icon">🌎</div>
+          <h4>Proyección Internacional</h4>
+          <p>El campeón representa a Colombia en la Final Internacional, compitiendo contra universidades de toda América Latina.</p>
         </div>
-      </div>
-      <div class="artist-card artist-placeholder" data-initials="CR">
-        <div class="artist-overlay">
-          <p class="artist-name">Crudo</p>
-          <p class="artist-uni">U. Antonio Nariño</p>
+        <div class="logro-card">
+          <div class="logro-icon">🎤</div>
+          <h4>+300 Freestylers</h4>
+          <p>Desde su fundación, más de 300 estudiantes han competido en los escenarios de la liga.</p>
+        </div>
+        <div class="logro-card">
+          <div class="logro-icon">📺</div>
+          <h4>100K+ Espectadores</h4>
+          <p>Transmisiones en vivo con más de 100.000 espectadores acumulados en todas las ediciones.</p>
+        </div>
+        <div class="logro-card">
+          <div class="logro-icon">🎓</div>
+          <h4>12 Universidades</h4>
+          <p>Participación activa de las principales universidades de Colombia en cada temporada.</p>
+        </div>
+        <div class="logro-card">
+          <div class="logro-icon">⚡</div>
+          <h4>Formato Único</h4>
+          <p>Sistema de batalla 1v1 con jurado especializado y criterios académicamente definidos para evaluar el freestyle.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <div id="eventos" style="padding: 100px 60px; background:#0c0c0c;">
-    <div style="max-width:1400px; margin:0 auto;">
+  <!-- ══════════════════════════════════════════
+       UNIVERSIDADES — Acordeones desplegables
+  ══════════════════════════════════════════ -->
+  <div id="universidades" class="section-universidades section-page">
+    <div class="uni-inner">
+      <p class="section-label">Temporada 2026</p>
+      <h2 class="section-title">Universidades</h2>
+
+      <!-- Universidad 1 -->
+      <div class="uni-accordion">
+        <div class="uni-bar">
+          <div class="uni-bar-left">
+            <span class="uni-bar-initial">UN</span>
+            <div>
+              <p class="uni-bar-name">Universidad Nacional de Colombia</p>
+              <p class="uni-bar-city">Bogotá</p>
+            </div>
+          </div>
+          <div class="uni-bar-actions">
+            <button class="uni-btn" onclick="togglePanel(this, 'competidores-1')">Competidores</button>
+            <button class="uni-btn uni-btn--gold" onclick="togglePanel(this, 'logros-1')">Logros</button>
+            <span class="uni-bar-chevron">▾</span>
+          </div>
+        </div>
+
+        <div id="competidores-1" class="uni-panel" hidden>
+          <p class="panel-label">Competidores</p>
+          <div class="competidores-grid">
+            <div class="competidor-card">
+              <div class="competidor-photo" data-initials="MK"></div>
+              <p class="competidor-name">MKultra</p>
+            </div>
+            <div class="competidor-card">
+              <div class="competidor-photo" data-initials="SB"></div>
+              <p class="competidor-name">Subreal</p>
+            </div>
+            <div class="competidor-card">
+              <div class="competidor-photo" data-initials="DV"></div>
+              <p class="competidor-name">Desvío</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="logros-1" class="uni-panel" hidden>
+          <p class="panel-label">Logros en Asimétrico</p>
+          <ul class="logros-list">
+            <li><span class="logro-num">🥇</span> Campeón Nacional 2023</li>
+            <li><span class="logro-num">🥈</span> Subcampeón Nacional 2024</li>
+            <li><span class="logro-num">⭐</span> Mayor número de clasificados a semifinal (4 temporadas)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Universidad 2 -->
+      <div class="uni-accordion">
+        <div class="uni-bar">
+          <div class="uni-bar-left">
+            <span class="uni-bar-initial">UA</span>
+            <div>
+              <p class="uni-bar-name">Universidad de los Andes</p>
+              <p class="uni-bar-city">Bogotá</p>
+            </div>
+          </div>
+          <div class="uni-bar-actions">
+            <button class="uni-btn" onclick="togglePanel(this, 'competidores-2')">Competidores</button>
+            <button class="uni-btn uni-btn--gold" onclick="togglePanel(this, 'logros-2')">Logros</button>
+            <span class="uni-bar-chevron">▾</span>
+          </div>
+        </div>
+
+        <div id="competidores-2" class="uni-panel" hidden>
+          <p class="panel-label">Competidores</p>
+          <div class="competidores-grid">
+            <div class="competidor-card">
+              <div class="competidor-photo" data-initials="VR"></div>
+              <p class="competidor-name">Vertigo</p>
+            </div>
+            <div class="competidor-card">
+              <div class="competidor-photo" data-initials="AL"></div>
+              <p class="competidor-name">Álvarez</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="logros-2" class="uni-panel" hidden>
+          <p class="panel-label">Logros en Asimétrico</p>
+          <ul class="logros-list">
+            <li><span class="logro-num">🥇</span> Campeón Nacional 2024</li>
+            <li><span class="logro-num">⭐</span> Representante en Final Internacional 2024</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Universidad 3 -->
+      <div class="uni-accordion">
+        <div class="uni-bar">
+          <div class="uni-bar-left">
+            <span class="uni-bar-initial">PJ</span>
+            <div>
+              <p class="uni-bar-name">Pontificia Universidad Javeriana</p>
+              <p class="uni-bar-city">Bogotá</p>
+            </div>
+          </div>
+          <div class="uni-bar-actions">
+            <button class="uni-btn" onclick="togglePanel(this, 'competidores-3')">Competidores</button>
+            <button class="uni-btn uni-btn--gold" onclick="togglePanel(this, 'logros-3')">Logros</button>
+            <span class="uni-bar-chevron">▾</span>
+          </div>
+        </div>
+
+        <div id="competidores-3" class="uni-panel" hidden>
+          <p class="panel-label">Competidores</p>
+          <div class="competidores-grid">
+            <div class="competidor-card">
+              <div class="competidor-photo" data-initials="SK"></div>
+              <p class="competidor-name">Skema</p>
+            </div>
+            <div class="competidor-card">
+              <div class="competidor-photo" data-initials="PX"></div>
+              <p class="competidor-name">Proximal</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="logros-3" class="uni-panel" hidden>
+          <p class="panel-label">Logros en Asimétrico</p>
+          <ul class="logros-list">
+            <li><span class="logro-num">🥉</span> Tercer lugar Nacional 2023</li>
+            <li><span class="logro-num">⭐</span> Mejor puntuación de jurado 2022</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Universidad 4 -->
+      <div class="uni-accordion">
+        <div class="uni-bar">
+          <div class="uni-bar-left">
+            <span class="uni-bar-initial">UR</span>
+            <div>
+              <p class="uni-bar-name">Universidad del Rosario</p>
+              <p class="uni-bar-city">Bogotá</p>
+            </div>
+          </div>
+          <div class="uni-bar-actions">
+            <button class="uni-btn" onclick="togglePanel(this, 'competidores-4')">Competidores</button>
+            <button class="uni-btn uni-btn--gold" onclick="togglePanel(this, 'logros-4')">Logros</button>
+            <span class="uni-bar-chevron">▾</span>
+          </div>
+        </div>
+
+        <div id="competidores-4" class="uni-panel" hidden>
+          <p class="panel-label">Competidores</p>
+          <div class="competidores-grid">
+            <div class="competidor-card">
+              <div class="competidor-photo" data-initials="NX"></div>
+              <p class="competidor-name">Nexo</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="logros-4" class="uni-panel" hidden>
+          <p class="panel-label">Logros en Asimétrico</p>
+          <ul class="logros-list">
+            <li><span class="logro-num">⭐</span> Primera participación en semifinal 2024</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Universidad 5 -->
+      <div class="uni-accordion">
+        <div class="uni-bar">
+          <div class="uni-bar-left">
+            <span class="uni-bar-initial">UE</span>
+            <div>
+              <p class="uni-bar-name">Universidad Externado de Colombia</p>
+              <p class="uni-bar-city">Bogotá</p>
+            </div>
+          </div>
+          <div class="uni-bar-actions">
+            <button class="uni-btn" onclick="togglePanel(this, 'competidores-5')">Competidores</button>
+            <button class="uni-btn uni-btn--gold" onclick="togglePanel(this, 'logros-5')">Logros</button>
+            <span class="uni-bar-chevron">▾</span>
+          </div>
+        </div>
+
+        <div id="competidores-5" class="uni-panel" hidden>
+          <p class="panel-label">Competidores</p>
+          <div class="competidores-grid">
+            <div class="competidor-card">
+              <div class="competidor-photo" data-initials="FX"></div>
+              <p class="competidor-name">Fénix</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="logros-5" class="uni-panel" hidden>
+          <p class="panel-label">Logros en Asimétrico</p>
+          <ul class="logros-list">
+            <li><span class="logro-num">⭐</span> Clasificada en todas las ediciones</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Universidad 6 -->
+      <div class="uni-accordion">
+        <div class="uni-bar">
+          <div class="uni-bar-left">
+            <span class="uni-bar-initial">UD</span>
+            <div>
+              <p class="uni-bar-name">Universidad Distrital Francisco José de Caldas</p>
+              <p class="uni-bar-city">Bogotá</p>
+            </div>
+          </div>
+          <div class="uni-bar-actions">
+            <button class="uni-btn" onclick="togglePanel(this, 'competidores-6')">Competidores</button>
+            <button class="uni-btn uni-btn--gold" onclick="togglePanel(this, 'logros-6')">Logros</button>
+            <span class="uni-bar-chevron">▾</span>
+          </div>
+        </div>
+
+        <div id="competidores-6" class="uni-panel" hidden>
+          <p class="panel-label">Competidores</p>
+          <div class="competidores-grid">
+            <div class="competidor-card">
+              <div class="competidor-photo" data-initials="SL"></div>
+              <p class="competidor-name">Sello</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="logros-6" class="uni-panel" hidden>
+          <p class="panel-label">Logros en Asimétrico</p>
+          <ul class="logros-list">
+            <li><span class="logro-num">🥇</span> Campeón Nacional 2022</li>
+            <li><span class="logro-num">⭐</span> Mayor audiencia en batalla individual (2022)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Universidad 7 -->
+      <div class="uni-accordion">
+        <div class="uni-bar">
+          <div class="uni-bar-left">
+            <span class="uni-bar-initial">UL</span>
+            <div>
+              <p class="uni-bar-name">Universidad Libre</p>
+              <p class="uni-bar-city">Bogotá</p>
+            </div>
+          </div>
+          <div class="uni-bar-actions">
+            <button class="uni-btn" onclick="togglePanel(this, 'competidores-7')">Competidores</button>
+            <button class="uni-btn uni-btn--gold" onclick="togglePanel(this, 'logros-7')">Logros</button>
+            <span class="uni-bar-chevron">▾</span>
+          </div>
+        </div>
+
+        <div id="competidores-7" class="uni-panel" hidden>
+          <p class="panel-label">Competidores</p>
+          <div class="competidores-grid">
+            <div class="competidor-card">
+              <div class="competidor-photo" data-initials="RM"></div>
+              <p class="competidor-name">Ritmo</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="logros-7" class="uni-panel" hidden>
+          <p class="panel-label">Logros en Asimétrico</p>
+          <ul class="logros-list">
+            <li><span class="logro-num">⭐</span> Primera clasificación a semifinal 2023</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Universidad 8 -->
+      <div class="uni-accordion">
+        <div class="uni-bar">
+          <div class="uni-bar-left">
+            <span class="uni-bar-initial">AN</span>
+            <div>
+              <p class="uni-bar-name">Universidad Antonio Nariño</p>
+              <p class="uni-bar-city">Bogotá</p>
+            </div>
+          </div>
+          <div class="uni-bar-actions">
+            <button class="uni-btn" onclick="togglePanel(this, 'competidores-8')">Competidores</button>
+            <button class="uni-btn uni-btn--gold" onclick="togglePanel(this, 'logros-8')">Logros</button>
+            <span class="uni-bar-chevron">▾</span>
+          </div>
+        </div>
+
+        <div id="competidores-8" class="uni-panel" hidden>
+          <p class="panel-label">Competidores</p>
+          <div class="competidores-grid">
+            <div class="competidor-card">
+              <div class="competidor-photo" data-initials="CR"></div>
+              <p class="competidor-name">Crudo</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="logros-8" class="uni-panel" hidden>
+          <p class="panel-label">Logros en Asimétrico</p>
+          <ul class="logros-list">
+            <li><span class="logro-num">⭐</span> Debut en temporada 2025</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       EVENTOS
+  ══════════════════════════════════════════ -->
+  <div id="eventos" class="section-eventos section-page">
+    <div class="eventos-inner">
       <p class="section-label">Calendario</p>
       <h2 class="section-title">Eventos</h2>
 
@@ -175,14 +514,17 @@
             <p class="event-name">Gran Final Nacional</p>
             <p class="event-place">Por confirmar · Colombia</p>
           </div>
-          <span class="event-badge" style="border-color:rgba(212,175,55,.7); color:var(--accent);">Final</span>
+          <span class="event-badge event-badge--final">Final</span>
           <span class="event-arrow">→</span>
         </div>
       </div>
     </div>
   </div>
 
-  <section id="info" style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; max-width:1400px; margin:0 auto; padding:100px 60px;">
+  <!-- ══════════════════════════════════════════
+       INFO
+  ══════════════════════════════════════════ -->
+  <section id="info" class="section-info section-page">
     <div>
       <p class="section-label">Reglamento</p>
       <h2 class="section-title">¿Cómo funciona?</h2>
@@ -190,7 +532,7 @@
         <li><span class="rule-num">01</span><span class="rule-text">Debes ser estudiante universitario activo con carné vigente.</span></li>
         <li><span class="rule-num">02</span><span class="rule-text">Batallas 1v1 de 60 segundos por turno, formato doble ronda.</span></li>
         <li><span class="rule-num">03</span><span class="rule-text">Jurado de 3 jueces especializados en freestyle. Voto de calidad en caso de empate.</span></li>
-        <li><span class="rule-num">04</span><span class="rule-text">Criterios de evaluación: ingenio, flow, contenido, reacción y replica.</span></li>
+        <li><span class="rule-num">04</span><span class="rule-text">Criterios de evaluación: ingenio, flow, contenido, reacción y réplica.</span></li>
         <li><span class="rule-num">05</span><span class="rule-text">Los 2 mejores de cada clasificatoria avanzan a semifinal nacional.</span></li>
         <li><span class="rule-num">06</span><span class="rule-text">El campeón representa a Colombia en la Final Internacional.</span></li>
       </ul>
@@ -215,9 +557,11 @@
     </div>
   </section>
 
-  <div id="final" style="text-align:center; padding:120px 40px; position:relative; overflow:hidden; background:linear-gradient(135deg,#0a0a0a 0%,#141414 50%,#0a0a0a 100%);">
-    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Bebas Neue',sans-serif;font-size:clamp(8rem,20vw,22rem);color:rgba(255,255,255,.025);white-space:nowrap;pointer-events:none;">FINAL</div>
-    <img src="img/logo_asimetrico.png" alt="Logo">
+  <!-- ══════════════════════════════════════════
+       FINAL INTERNACIONAL
+  ══════════════════════════════════════════ -->
+  <div id="final" class="section-final">
+    <img src="img/logo_asimetrico.png" alt="Logo" class="final-logo">
     <h2 class="final-title">Final Internacional</h2>
     <p class="final-sub">El mejor freestyler universitario de Colombia competirá a nivel internacional.<br>¿Tienes lo que se necesita?</p>
     <a href="#eventos" class="btn-primary">Inscríbete ahora</a>
@@ -239,4 +583,4 @@
 
   <script src="script.js"></script>
 </body>
-</html> 
+</html>

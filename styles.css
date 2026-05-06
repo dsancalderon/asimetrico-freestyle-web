@@ -970,6 +970,13 @@ footer .foot-links a:hover { color: rgba(255,255,255,.7); }
   letter-spacing: .15em;
 }
 
+/* ── Ocultar contenedores cuando tienen el atributo hidden ── */
+.events-loading[hidden],
+.events-error[hidden],
+.events-list[hidden] {
+  display: none !important;
+}
+
 /* ── Event row extras ── */
 .event-row--done { opacity: .45; }
 .event-row--done .event-name { text-decoration: line-through; }

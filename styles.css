@@ -496,6 +496,95 @@ nav.scrolled {
   color: #fff;
   background: rgba(212,175,55,.07);
 }
+.uni-btn--info { border-color: rgba(100,160,255,.35); color: #7ab0ff; }
+.uni-btn--info:hover, .uni-btn--info.active {
+  border-color: rgba(100,160,255,.8);
+  color: #fff;
+  background: rgba(100,160,255,.07);
+}
+
+/* ── Logo de universidad en la barra ── */
+.uni-logo-wrap {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a1a1a;
+  clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+  overflow: hidden;
+}
+.uni-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 4px;
+  filter: brightness(1.05);
+}
+
+/* ── Panel info del equipo ── */
+.uni-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 2px;
+  margin-bottom: 20px;
+}
+.uni-info-item {
+  background: #161616;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.uni-info-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: .68rem;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  color: var(--silver-dark);
+}
+.uni-info-val {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: .06em;
+  color: #fff;
+}
+.uni-info-val--active {
+  color: #6fe08a;
+}
+.uni-info-desc {
+  font-size: .9rem;
+  color: rgba(255,255,255,.5);
+  line-height: 1.7;
+  max-width: 680px;
+}
+
+/* ── Tarjeta competidor vacía ── */
+.competidor-card--empty .competidor-photo {
+  border: 1px dashed rgba(255,255,255,.12);
+  background: transparent;
+}
+.competidor-card--empty .competidor-photo::before {
+  content: attr(data-initials);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  color: rgba(255,255,255,.08);
+}
+.competidor-card--empty .competidor-name {
+  color: rgba(255,255,255,.25);
+  font-style: italic;
+}
+
+/* ── Foto con imagen de fondo ── */
+.competidor-photo[style*="background-image"] {
+  background-size: cover;
+  background-position: center top;
+}
+.competidor-photo[style*="background-image"]::before {
+  display: none;
+}
 .uni-bar-chevron {
   font-size: .9rem;
   color: rgba(255,255,255,.3);

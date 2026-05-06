@@ -154,39 +154,36 @@
       <p class="section-label">Temporada 2026</p>
       <h2 class="section-title">Universidades</h2>
 
-      <!-- Universidad 1 -->
+      <!-- Universidad 1: Universidad Nacional -->
       <div class="uni-accordion">
         <div class="uni-bar">
           <div class="uni-bar-left">
-            <span class="uni-bar-initial">UN</span>
+            <div class="uni-logo-wrap">
+              <img src="images/nacional/logo.png" alt="Logo UN" class="uni-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="uni-bar-initial" style="display:none">UN</span>
+            </div>
             <div>
               <p class="uni-bar-name">Universidad Nacional de Colombia</p>
               <p class="uni-bar-city">Bogotá</p>
             </div>
           </div>
           <div class="uni-bar-actions">
-            <button class="uni-btn" onclick="togglePanel(this, 'competidores-1')">Competidores</button>
+            <button class="uni-btn uni-btn--info" onclick="togglePanel(this, 'info-1')">Info</button>
             <button class="uni-btn uni-btn--gold" onclick="togglePanel(this, 'logros-1')">Logros</button>
+            <button class="uni-btn" onclick="togglePanel(this, 'competidores-1')">Participantes</button>
             <span class="uni-bar-chevron">▾</span>
           </div>
         </div>
 
-        <div id="competidores-1" class="uni-panel" hidden>
-          <p class="panel-label">Competidores</p>
-          <div class="competidores-grid">
-            <div class="competidor-card">
-              <div class="competidor-photo" data-initials="MK"></div>
-              <p class="competidor-name">MKultra</p>
-            </div>
-            <div class="competidor-card">
-              <div class="competidor-photo" data-initials="SB"></div>
-              <p class="competidor-name">Subreal</p>
-            </div>
-            <div class="competidor-card">
-              <div class="competidor-photo" data-initials="DV"></div>
-              <p class="competidor-name">Desvío</p>
-            </div>
+        <div id="info-1" class="uni-panel" hidden>
+          <p class="panel-label">Información del equipo</p>
+          <div class="uni-info-grid">
+            <div class="uni-info-item"><span class="uni-info-label">Ciudad</span><span class="uni-info-val">Bogotá</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Temporadas</span><span class="uni-info-val">4</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Sede</span><span class="uni-info-val">Ciudad Universitaria</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Estado</span><span class="uni-info-val uni-info-val--active">Activo</span></div>
           </div>
+          <p class="uni-info-desc">Pionera en la liga desde la primera edición. La Nacional representa la tradición del freestyle universitario con el mayor número de clasificados a semifinal en la historia de la competencia.</p>
         </div>
 
         <div id="logros-1" class="uni-panel" hidden>
@@ -197,37 +194,64 @@
             <li><span class="logro-num">⭐</span> Mayor número de clasificados a semifinal (4 temporadas)</li>
           </ul>
         </div>
+
+        <div id="competidores-1" class="uni-panel" hidden>
+          <p class="panel-label">Participantes</p>
+          <div class="competidores-grid">
+            <div class="competidor-card">
+              <div class="competidor-photo" style="background-image:url('images/nacional/beat.jpg')" data-initials="MK"></div>
+              <p class="competidor-name">MKultra</p>
+            </div>
+            <div class="competidor-card">
+              <div class="competidor-photo" style="background-image:url('images/nacional/thomas.jpg')" data-initials="SB"></div>
+              <p class="competidor-name">Subreal</p>
+            </div>
+            <div class="competidor-card">
+              <div class="competidor-photo" data-initials="DV"></div>
+              <p class="competidor-name">Desvío</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Universidad 2 -->
+      <!-- Universidad 2: Universidad de los Andes -->
       <div class="uni-accordion">
         <div class="uni-bar">
           <div class="uni-bar-left">
-            <span class="uni-bar-initial">UA</span>
+            <div class="uni-logo-wrap">
+              <img src="images/los-andes/logo.png" alt="Logo Andes" class="uni-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="uni-bar-initial" style="display:none">UA</span>
+            </div>
             <div>
               <p class="uni-bar-name">Universidad de los Andes</p>
               <p class="uni-bar-city">Bogotá</p>
             </div>
           </div>
           <div class="uni-bar-actions">
-            <button class="uni-btn" onclick="togglePanel(this, 'competidores-2')">Competidores</button>
+            <button class="uni-btn uni-btn--info" onclick="togglePanel(this, 'info-2')">Info</button>
             <button class="uni-btn uni-btn--gold" onclick="togglePanel(this, 'logros-2')">Logros</button>
+            <button class="uni-btn" onclick="togglePanel(this, 'competidores-2')">Participantes</button>
             <span class="uni-bar-chevron">▾</span>
           </div>
         </div>
 
-        <div id="competidores-2" class="uni-panel" hidden>
-          <p class="panel-label">Competidores</p>
-          <div class="competidores-grid">
-            <div class="competidor-card">
-              <div class="competidor-photo" data-initials="VR"></div>
-              <p class="competidor-name">Vertigo</p>
-            </div>
-            <div class="competidor-card">
-              <div class="competidor-photo" data-initials="AL"></div>
-              <p class="competidor-name">Álvarez</p>
-            </div>
+        <div id="info-2" class="uni-panel" hidden>
+          <p class="panel-label">Información del equipo</p>
+          <div class="uni-info-grid">
+            <div class="uni-info-item"><span class="uni-info-label">Ciudad</span><span class="uni-info-val">Bogotá</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Temporadas</span><span class="uni-info-val">3</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Sede</span><span class="uni-info-val">Campus Uniandes</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Estado</span><span class="uni-info-val uni-info-val--active">Activo</span></div>
           </div>
+          <p class="uni-info-desc">Los Andes irrumpió en la escena universitaria con un estilo técnico y lírico. Campeones en 2024, demostraron que el freestyle también vive en los claustros de las universidades privadas.</p>
         </div>
 
         <div id="logros-2" class="uni-panel" hidden>
@@ -237,37 +261,64 @@
             <li><span class="logro-num">⭐</span> Representante en Final Internacional 2024</li>
           </ul>
         </div>
+
+        <div id="competidores-2" class="uni-panel" hidden>
+          <p class="panel-label">Participantes</p>
+          <div class="competidores-grid">
+            <div class="competidor-card">
+              <div class="competidor-photo" data-initials="VR"></div>
+              <p class="competidor-name">Vertigo</p>
+            </div>
+            <div class="competidor-card">
+              <div class="competidor-photo" data-initials="AL"></div>
+              <p class="competidor-name">Álvarez</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Universidad 3 -->
+      <!-- Universidad 3: Pontificia Universidad Javeriana -->
       <div class="uni-accordion">
         <div class="uni-bar">
           <div class="uni-bar-left">
-            <span class="uni-bar-initial">PJ</span>
+            <div class="uni-logo-wrap">
+              <img src="images/javeriana/logo.png" alt="Logo Javeriana" class="uni-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="uni-bar-initial" style="display:none">PJ</span>
+            </div>
             <div>
               <p class="uni-bar-name">Pontificia Universidad Javeriana</p>
               <p class="uni-bar-city">Bogotá</p>
             </div>
           </div>
           <div class="uni-bar-actions">
-            <button class="uni-btn" onclick="togglePanel(this, 'competidores-3')">Competidores</button>
+            <button class="uni-btn uni-btn--info" onclick="togglePanel(this, 'info-3')">Info</button>
             <button class="uni-btn uni-btn--gold" onclick="togglePanel(this, 'logros-3')">Logros</button>
+            <button class="uni-btn" onclick="togglePanel(this, 'competidores-3')">Participantes</button>
             <span class="uni-bar-chevron">▾</span>
           </div>
         </div>
 
-        <div id="competidores-3" class="uni-panel" hidden>
-          <p class="panel-label">Competidores</p>
-          <div class="competidores-grid">
-            <div class="competidor-card">
-              <div class="competidor-photo" data-initials="SK"></div>
-              <p class="competidor-name">Skema</p>
-            </div>
-            <div class="competidor-card">
-              <div class="competidor-photo" data-initials="PX"></div>
-              <p class="competidor-name">Proximal</p>
-            </div>
+        <div id="info-3" class="uni-panel" hidden>
+          <p class="panel-label">Información del equipo</p>
+          <div class="uni-info-grid">
+            <div class="uni-info-item"><span class="uni-info-label">Ciudad</span><span class="uni-info-val">Bogotá</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Temporadas</span><span class="uni-info-val">4</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Sede</span><span class="uni-info-val">Campus Javeriana</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Estado</span><span class="uni-info-val uni-info-val--active">Activo</span></div>
           </div>
+          <p class="uni-info-desc">La Javeriana combina tradición académica con pasión por la rima. Su equipo ha mostrado constancia y calidad técnica en cada edición, destacando por su vocabulario y estructura lírica.</p>
         </div>
 
         <div id="logros-3" class="uni-panel" hidden>
@@ -277,33 +328,64 @@
             <li><span class="logro-num">⭐</span> Mejor puntuación de jurado 2022</li>
           </ul>
         </div>
+
+        <div id="competidores-3" class="uni-panel" hidden>
+          <p class="panel-label">Participantes</p>
+          <div class="competidores-grid">
+            <div class="competidor-card">
+              <div class="competidor-photo" style="background-image:url('images/javeriana/yate.jpg')" data-initials="SK"></div>
+              <p class="competidor-name">Skema</p>
+            </div>
+            <div class="competidor-card">
+              <div class="competidor-photo" data-initials="PX"></div>
+              <p class="competidor-name">Proximal</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Universidad 4 -->
+      <!-- Universidad 4: Universidad del Rosario -->
       <div class="uni-accordion">
         <div class="uni-bar">
           <div class="uni-bar-left">
-            <span class="uni-bar-initial">UR</span>
+            <div class="uni-logo-wrap">
+              <img src="images/rosario/logo.png" alt="Logo Rosario" class="uni-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="uni-bar-initial" style="display:none">UR</span>
+            </div>
             <div>
               <p class="uni-bar-name">Universidad del Rosario</p>
               <p class="uni-bar-city">Bogotá</p>
             </div>
           </div>
           <div class="uni-bar-actions">
-            <button class="uni-btn" onclick="togglePanel(this, 'competidores-4')">Competidores</button>
+            <button class="uni-btn uni-btn--info" onclick="togglePanel(this, 'info-4')">Info</button>
             <button class="uni-btn uni-btn--gold" onclick="togglePanel(this, 'logros-4')">Logros</button>
+            <button class="uni-btn" onclick="togglePanel(this, 'competidores-4')">Participantes</button>
             <span class="uni-bar-chevron">▾</span>
           </div>
         </div>
 
-        <div id="competidores-4" class="uni-panel" hidden>
-          <p class="panel-label">Competidores</p>
-          <div class="competidores-grid">
-            <div class="competidor-card">
-              <div class="competidor-photo" data-initials="NX"></div>
-              <p class="competidor-name">Nexo</p>
-            </div>
+        <div id="info-4" class="uni-panel" hidden>
+          <p class="panel-label">Información del equipo</p>
+          <div class="uni-info-grid">
+            <div class="uni-info-item"><span class="uni-info-label">Ciudad</span><span class="uni-info-val">Bogotá</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Temporadas</span><span class="uni-info-val">2</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Sede</span><span class="uni-info-val">Campus Rosario</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Estado</span><span class="uni-info-val uni-info-val--active">Activo</span></div>
           </div>
+          <p class="uni-info-desc">El Rosario representa uno de los claustros más antiguos de Colombia. Su equipo, aunque joven en la liga, ha demostrado ambición y ganas de crecer dentro de la competencia.</p>
         </div>
 
         <div id="logros-4" class="uni-panel" hidden>
@@ -312,33 +394,64 @@
             <li><span class="logro-num">⭐</span> Primera participación en semifinal 2024</li>
           </ul>
         </div>
+
+        <div id="competidores-4" class="uni-panel" hidden>
+          <p class="panel-label">Participantes</p>
+          <div class="competidores-grid">
+            <div class="competidor-card">
+              <div class="competidor-photo" data-initials="NX"></div>
+              <p class="competidor-name">Nexo</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Universidad 5 -->
+      <!-- Universidad 5: Universidad Externado -->
       <div class="uni-accordion">
         <div class="uni-bar">
           <div class="uni-bar-left">
-            <span class="uni-bar-initial">UE</span>
+            <div class="uni-logo-wrap">
+              <img src="images/externado/logo.png" alt="Logo Externado" class="uni-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="uni-bar-initial" style="display:none">UE</span>
+            </div>
             <div>
               <p class="uni-bar-name">Universidad Externado de Colombia</p>
               <p class="uni-bar-city">Bogotá</p>
             </div>
           </div>
           <div class="uni-bar-actions">
-            <button class="uni-btn" onclick="togglePanel(this, 'competidores-5')">Competidores</button>
+            <button class="uni-btn uni-btn--info" onclick="togglePanel(this, 'info-5')">Info</button>
             <button class="uni-btn uni-btn--gold" onclick="togglePanel(this, 'logros-5')">Logros</button>
+            <button class="uni-btn" onclick="togglePanel(this, 'competidores-5')">Participantes</button>
             <span class="uni-bar-chevron">▾</span>
           </div>
         </div>
 
-        <div id="competidores-5" class="uni-panel" hidden>
-          <p class="panel-label">Competidores</p>
-          <div class="competidores-grid">
-            <div class="competidor-card">
-              <div class="competidor-photo" data-initials="FX"></div>
-              <p class="competidor-name">Fénix</p>
-            </div>
+        <div id="info-5" class="uni-panel" hidden>
+          <p class="panel-label">Información del equipo</p>
+          <div class="uni-info-grid">
+            <div class="uni-info-item"><span class="uni-info-label">Ciudad</span><span class="uni-info-val">Bogotá</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Temporadas</span><span class="uni-info-val">4</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Sede</span><span class="uni-info-val">Campus Externado</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Estado</span><span class="uni-info-val uni-info-val--active">Activo</span></div>
           </div>
+          <p class="uni-info-desc">Única universidad con clasificados en todas las ediciones de la liga. El Externado es sinónimo de consistencia y su equipo ha formado a raperos que hoy son referentes del freestyle universitario.</p>
         </div>
 
         <div id="logros-5" class="uni-panel" hidden>
@@ -347,33 +460,64 @@
             <li><span class="logro-num">⭐</span> Clasificada en todas las ediciones</li>
           </ul>
         </div>
+
+        <div id="competidores-5" class="uni-panel" hidden>
+          <p class="panel-label">Participantes</p>
+          <div class="competidores-grid">
+            <div class="competidor-card">
+              <div class="competidor-photo" style="background-image:url('images/externado/verlier.jpg')" data-initials="FX"></div>
+              <p class="competidor-name">Fénix</p>
+            </div>
+            <div class="competidor-card">
+              <div class="competidor-photo" style="background-image:url('images/externado/yezzito.jpg')" data-initials="YZ"></div>
+              <p class="competidor-name">Yezzito</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Universidad 6 -->
+      <!-- Universidad 6: Universidad Distrital -->
       <div class="uni-accordion">
         <div class="uni-bar">
           <div class="uni-bar-left">
-            <span class="uni-bar-initial">UD</span>
+            <div class="uni-logo-wrap">
+              <img src="images/distrital/logo.png" alt="Logo Distrital" class="uni-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="uni-bar-initial" style="display:none">UD</span>
+            </div>
             <div>
               <p class="uni-bar-name">Universidad Distrital Francisco José de Caldas</p>
               <p class="uni-bar-city">Bogotá</p>
             </div>
           </div>
           <div class="uni-bar-actions">
-            <button class="uni-btn" onclick="togglePanel(this, 'competidores-6')">Competidores</button>
+            <button class="uni-btn uni-btn--info" onclick="togglePanel(this, 'info-6')">Info</button>
             <button class="uni-btn uni-btn--gold" onclick="togglePanel(this, 'logros-6')">Logros</button>
+            <button class="uni-btn" onclick="togglePanel(this, 'competidores-6')">Participantes</button>
             <span class="uni-bar-chevron">▾</span>
           </div>
         </div>
 
-        <div id="competidores-6" class="uni-panel" hidden>
-          <p class="panel-label">Competidores</p>
-          <div class="competidores-grid">
-            <div class="competidor-card">
-              <div class="competidor-photo" data-initials="SL"></div>
-              <p class="competidor-name">Sello</p>
-            </div>
+        <div id="info-6" class="uni-panel" hidden>
+          <p class="panel-label">Información del equipo</p>
+          <div class="uni-info-grid">
+            <div class="uni-info-item"><span class="uni-info-label">Ciudad</span><span class="uni-info-val">Bogotá</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Temporadas</span><span class="uni-info-val">4</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Sede</span><span class="uni-info-val">Sede Macarena</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Estado</span><span class="uni-info-val uni-info-val--active">Activo</span></div>
           </div>
+          <p class="uni-info-desc">La Distrital es cuna del freestyle callejero llevado al ámbito universitario. Sus competidores traen la esencia de la calle y la mezclan con rigor académico, creando un estilo único y explosivo.</p>
         </div>
 
         <div id="logros-6" class="uni-panel" hidden>
@@ -383,33 +527,64 @@
             <li><span class="logro-num">⭐</span> Mayor audiencia en batalla individual (2022)</li>
           </ul>
         </div>
+
+        <div id="competidores-6" class="uni-panel" hidden>
+          <p class="panel-label">Participantes</p>
+          <div class="competidores-grid">
+            <div class="competidor-card">
+              <div class="competidor-photo" style="background-image:url('images/distrital/vlade.jpg')" data-initials="SL"></div>
+              <p class="competidor-name">Sello</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Universidad 7 -->
+      <!-- Universidad 7: Universidad Libre -->
       <div class="uni-accordion">
         <div class="uni-bar">
           <div class="uni-bar-left">
-            <span class="uni-bar-initial">UL</span>
+            <div class="uni-logo-wrap">
+              <img src="images/libertadores/logo.png" alt="Logo Libre" class="uni-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="uni-bar-initial" style="display:none">UL</span>
+            </div>
             <div>
               <p class="uni-bar-name">Universidad Libre</p>
               <p class="uni-bar-city">Bogotá</p>
             </div>
           </div>
           <div class="uni-bar-actions">
-            <button class="uni-btn" onclick="togglePanel(this, 'competidores-7')">Competidores</button>
+            <button class="uni-btn uni-btn--info" onclick="togglePanel(this, 'info-7')">Info</button>
             <button class="uni-btn uni-btn--gold" onclick="togglePanel(this, 'logros-7')">Logros</button>
+            <button class="uni-btn" onclick="togglePanel(this, 'competidores-7')">Participantes</button>
             <span class="uni-bar-chevron">▾</span>
           </div>
         </div>
 
-        <div id="competidores-7" class="uni-panel" hidden>
-          <p class="panel-label">Competidores</p>
-          <div class="competidores-grid">
-            <div class="competidor-card">
-              <div class="competidor-photo" data-initials="RM"></div>
-              <p class="competidor-name">Ritmo</p>
-            </div>
+        <div id="info-7" class="uni-panel" hidden>
+          <p class="panel-label">Información del equipo</p>
+          <div class="uni-info-grid">
+            <div class="uni-info-item"><span class="uni-info-label">Ciudad</span><span class="uni-info-val">Bogotá</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Temporadas</span><span class="uni-info-val">2</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Sede</span><span class="uni-info-val">Campus Libre</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Estado</span><span class="uni-info-val uni-info-val--active">Activo</span></div>
           </div>
+          <p class="uni-info-desc">La Libre trae frescura a la competencia con un equipo joven y hambriento. Su primera clasificación a semifinal en 2023 marcó un punto de inflexión en su historia dentro de Asimétrico.</p>
         </div>
 
         <div id="logros-7" class="uni-panel" hidden>
@@ -418,33 +593,64 @@
             <li><span class="logro-num">⭐</span> Primera clasificación a semifinal 2023</li>
           </ul>
         </div>
+
+        <div id="competidores-7" class="uni-panel" hidden>
+          <p class="panel-label">Participantes</p>
+          <div class="competidores-grid">
+            <div class="competidor-card">
+              <div class="competidor-photo" style="background-image:url('images/libertadores/j1.jpg')" data-initials="RM"></div>
+              <p class="competidor-name">Ritmo</p>
+            </div>
+            <div class="competidor-card">
+              <div class="competidor-photo" style="background-image:url('images/libertadores/wilvid.jpg')" data-initials="WV"></div>
+              <p class="competidor-name">Wilvid</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Universidad 8 -->
+      <!-- Universidad 8: Universidad Antonio Nariño -->
       <div class="uni-accordion">
         <div class="uni-bar">
           <div class="uni-bar-left">
-            <span class="uni-bar-initial">AN</span>
+            <div class="uni-logo-wrap">
+              <img src="images/ean/logo.png" alt="Logo EAN" class="uni-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="uni-bar-initial" style="display:none">AN</span>
+            </div>
             <div>
               <p class="uni-bar-name">Universidad Antonio Nariño</p>
               <p class="uni-bar-city">Bogotá</p>
             </div>
           </div>
           <div class="uni-bar-actions">
-            <button class="uni-btn" onclick="togglePanel(this, 'competidores-8')">Competidores</button>
+            <button class="uni-btn uni-btn--info" onclick="togglePanel(this, 'info-8')">Info</button>
             <button class="uni-btn uni-btn--gold" onclick="togglePanel(this, 'logros-8')">Logros</button>
+            <button class="uni-btn" onclick="togglePanel(this, 'competidores-8')">Participantes</button>
             <span class="uni-bar-chevron">▾</span>
           </div>
         </div>
 
-        <div id="competidores-8" class="uni-panel" hidden>
-          <p class="panel-label">Competidores</p>
-          <div class="competidores-grid">
-            <div class="competidor-card">
-              <div class="competidor-photo" data-initials="CR"></div>
-              <p class="competidor-name">Crudo</p>
-            </div>
+        <div id="info-8" class="uni-panel" hidden>
+          <p class="panel-label">Información del equipo</p>
+          <div class="uni-info-grid">
+            <div class="uni-info-item"><span class="uni-info-label">Ciudad</span><span class="uni-info-val">Bogotá</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Temporadas</span><span class="uni-info-val">1</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Sede</span><span class="uni-info-val">Campus Nariño</span></div>
+            <div class="uni-info-item"><span class="uni-info-label">Estado</span><span class="uni-info-val uni-info-val--active">Activo</span></div>
           </div>
+          <p class="uni-info-desc">Recién llegados a la liga en la temporada 2025, la Antonio Nariño viene con todo para demostrar que son una fuerza a tener en cuenta. Su debut fue prometedor y su hambre se siente en cada batalla.</p>
         </div>
 
         <div id="logros-8" class="uni-panel" hidden>
@@ -452,6 +658,32 @@
           <ul class="logros-list">
             <li><span class="logro-num">⭐</span> Debut en temporada 2025</li>
           </ul>
+        </div>
+
+        <div id="competidores-8" class="uni-panel" hidden>
+          <p class="panel-label">Participantes</p>
+          <div class="competidores-grid">
+            <div class="competidor-card">
+              <div class="competidor-photo" data-initials="CR"></div>
+              <p class="competidor-name">Crudo</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+            <div class="competidor-card competidor-card--empty">
+              <div class="competidor-photo" data-initials="?"></div>
+              <p class="competidor-name">Por confirmar</p>
+            </div>
+          </div>
         </div>
       </div>
 

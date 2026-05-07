@@ -1136,3 +1136,43 @@ footer .foot-links a:hover { color: rgba(255,255,255,.7); }
   .event-form-btn { width: 100%; text-align: center; clip-path: none; }
   .modal-box { clip-path: none; padding: 36px 24px 32px; }
 }
+/* ── Badge: pendiente ── */
+.event-badge.pending {
+  border-color: rgba(212,175,55,.4);
+  color: var(--accent);
+  opacity: .75;
+}
+
+/* ── Botón Ver más / Mostrar menos ── */
+.events-toggle-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0 8px;
+}
+.events-toggle-btn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: .82rem;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.5);
+  background: transparent;
+  border: 1px solid rgba(192,192,192,.2);
+  padding: 12px 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color .2s, border-color .2s;
+}
+.events-toggle-btn:hover {
+  color: var(--silver-light);
+  border-color: rgba(192,192,192,.55);
+}
+.events-toggle-arrow {
+  font-size: 1rem;
+  transition: transform .25s;
+}
+.events-toggle-arrow--up {
+  transform: rotate(180deg);
+}
